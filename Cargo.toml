@@ -1,6 +1,6 @@
 [package]
 name = "bxcan-ng"
-version = "0.7.0"
+version = "0.8.0"
 authors = [
     "Jonas Schievink <jonasschievink@gmail.com>",
     "Timo Kröger <timokroeger93@gmail.com>",
@@ -52,7 +52,6 @@ lto = true
 # cargo-release configuration
 [package.metadata.release]
 tag-message = "{{version}}"
-dev-version = false
 pre-release-commit-message = "Release {{version}}"
 
 # Change the changelog's `Unreleased` section to refer to this release and
@@ -71,8 +70,8 @@ No changes.
 # Bump the version inside the example manifest in `README.md`
 [[package.metadata.release.pre-release-replacements]]
 file = "README.md"
-search = 'bxcan = "[a-z0-9\\.-]+"'
-replace = 'bxcan = "{{version}}"'
+search = 'bxcan-ng = "[a-z0-9\\.-]+"'
+replace = 'bxcan-ng = "{{version}}"'
 
 # Bump the version referenced by the `html_root_url` attribute in `lib.rs`
 [[package.metadata.release.pre-release-replacements]]
