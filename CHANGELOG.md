@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Add the ability to read the error status registers and support for error interrupts via `SCB`
+* [*breaking change*] Rename the package to `bxcan-ng`
+
 ### Fixes
 
 * Mask out all reserved bits in `set_bit_timing` before writing the register.

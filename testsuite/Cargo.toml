@@ -30,6 +30,6 @@ stm32f1 = { version = "0.14.0", features = ["stm32f107", "rt"] }
 nb = "1.0.0"
 irq = "0.2.3"
 
-[dependencies.bxcan]
+[dependencies.bxcan-ng]
 path = ".."
 features = ["unstable-defmt"]

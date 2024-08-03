@@ -13,7 +13,7 @@ use cortex_m::peripheral::NVIC;
 use defmt_rtt as _;
 use panic_probe as _;
 
-use bxcan::{Can, FilterOwner, Frame, Instance, MasterInstance};
+use bxcan_ng::{Can, FilterOwner, Frame, Instance, MasterInstance};
 
 pub use stm32f1::stm32f107 as pac;
 
@@ -26,7 +26,7 @@ pub struct CAN2 {
 }
 
 unsafe impl Instance for CAN1 {
-    const REGISTERS: *mut bxcan::RegisterBlock = 0x4000_6400 as *mut _;
+    const REGISTERS: *mut bxcan_ng::RegisterBlock = 0x4000_6400 as *mut _;
 }
 
 unsafe impl MasterInstance for CAN1 {}
@@ -37,7 +37,7 @@ unsafe impl FilterOwner for CAN1 {
 }
 
 unsafe impl Instance for CAN2 {
-    const REGISTERS: *mut bxcan::RegisterBlock = 0x4000_6800 as *mut _;
+    const REGISTERS: *mut bxcan_ng::RegisterBlock = 0x4000_6800 as *mut _;
 }
 
 fn init(p: pac::Peripherals) -> (CAN1, CAN2) {

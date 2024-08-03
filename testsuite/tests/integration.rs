@@ -3,8 +3,8 @@
 
 #[defmt_test::tests]
 mod tests {
-    use bxcan::filter::{ListEntry32, Mask16, Mask32};
-    use bxcan::{ExtendedId, Fifo, Frame, Mailbox, StandardId};
+    use bxcan_ng::filter::{ListEntry32, Mask16, Mask32};
+    use bxcan_ng::{ExtendedId, Fifo, Frame, Mailbox, StandardId};
 
     use nb::block;
     use testsuite::State;

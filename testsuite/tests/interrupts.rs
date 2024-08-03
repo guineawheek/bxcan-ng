@@ -5,8 +5,8 @@
 mod tests {
     use core::sync::atomic::{AtomicBool, Ordering};
 
-    use bxcan::{filter::Mask32, Interrupts, Mailbox, StandardId};
-    use bxcan::{Fifo, Frame, Interrupt};
+    use bxcan_ng::{filter::Mask32, Interrupts, Mailbox, StandardId};
+    use bxcan_ng::{Fifo, Frame, Interrupt};
 
     use irq::handler;
     use nb::block;
