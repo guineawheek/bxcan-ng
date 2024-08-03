@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+No changes.
+
+## [0.8.0 - 2024-08-03](https://github.com/stm32-rs/bxcan/releases/tag/v0.8.0)
+
 * Add the ability to read the error status registers and support for error interrupts via `SCB`
 * Add `embedded-can-04` support
   * [*breaking change*] `embedded-hal-02` trait impls are now feature-gated
