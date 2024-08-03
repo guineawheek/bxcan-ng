@@ -36,6 +36,8 @@
 #![no_std]
 #![allow(clippy::unnecessary_operation)] // lint is bugged
 
+mod embedded_can;
+#[cfg(feature = "embedded-hal-02")]
 mod embedded_hal;
 pub mod filter;
 mod frame;

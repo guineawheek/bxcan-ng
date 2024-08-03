@@ -1,11 +1,11 @@
 # bxCAN peripheral driver
 
-[![crates.io](https://img.shields.io/crates/v/bxcan.svg)](https://crates.io/crates/bxcan)
-[![docs.rs](https://docs.rs/bxcan/badge.svg)](https://docs.rs/bxcan/)
-![CI](https://github.com/stm32-rs/bxcan/workflows/CI/badge.svg)
+[![crates.io](https://img.shields.io/crates/v/bxcan-ng.svg)](https://crates.io/crates/bxcan-ng)
+[![docs.rs](https://docs.rs/bxcan-ng/badge.svg)](https://docs.rs/bxcan-ng/)
+![CI](https://github.com/guineawheek/bxcan-ng/workflows/CI/badge.svg)
 
 This crate implements a driver for the bxCAN peripheral found in many low- to
-middle-end STM32 microcontrollers.
+middle-end STM32 and STM32-like microcontrollers.
 
 Please refer to the [changelog](CHANGELOG.md) to see what changed in the last
 releases.
@@ -16,10 +16,10 @@ Add an entry to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-bxcan = "0.7.0"
+bxcan-ng = "0.8.0"
 ```
 
-Check the [API Documentation](https://docs.rs/bxcan/) for how to use the
+Check the [API Documentation](https://docs.rs/bxcan-ng/) for how to use the
 crate's functionality.
 
 ## Rust version support

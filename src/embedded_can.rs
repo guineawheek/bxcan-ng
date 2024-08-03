@@ -2,9 +2,9 @@
 
 use crate::{Can, Data, ExtendedId, Frame, Id, Instance, OverrunError, StandardId};
 
-use embedded_hal_02::can;
+use embedded_can_04 as can;
 
-impl<I> can::Can for Can<I>
+impl<I> can::nb::Can for Can<I>
 where
     I: Instance,
 {
@@ -13,7 +13,11 @@ where
     type Error = OverrunError;
 
     fn transmit(&mut self, frame: &Self::Frame) -> nb::Result<Option<Self::Frame>, Self::Error> {
-        <Self as embedded_can_04::nb::Can>::transmit(self, frame)
+        match self.transmit(frame) {
+            Ok(status) => Ok(status.dequeued_frame().cloned()),
+            Err(nb::Error::WouldBlock) => Err(nb::Error::WouldBlock),
+            Err(nb::Error::Other(e)) => match e {},
+        }
     }
 
     fn receive(&mut self) -> nb::Result<Self::Frame, Self::Error> {

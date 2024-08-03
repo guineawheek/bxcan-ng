@@ -3,6 +3,8 @@
 ## Unreleased
 
 * Add the ability to read the error status registers and support for error interrupts via `SCB`
+* Add `embedded-can-04` support
+  * [*breaking change*] `embedded-hal-02` trait impls are now feature-gated
 * [*breaking change*] Rename the package to `bxcan-ng`
 
 ### Fixes
